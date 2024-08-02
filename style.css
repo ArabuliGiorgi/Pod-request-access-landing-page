@@ -6,3 +6,180 @@
 h1, p{
     font-family: "Chivo", sans-serif;
 }
+body{
+    background-color: #121725;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 62px 24px 94px 24px;
+    position: relative;
+}
+body::before{
+    content: '';
+    background-image: url(images/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: screen;
+    opacity: 0.15;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+header{
+    max-height: 56px;
+}
+header img{
+    height: 100%;
+}
+main{
+    width: 100%;
+    position: relative;
+}
+#main-heading{
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    color: #54E6AF;
+    margin-bottom: 16px;
+}
+#text{
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #C2CBE5;
+    margin-bottom: 98px;
+}
+.logos{
+    max-height: 17px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 156px;
+    opacity: 0.5;
+}
+#logo1, #logo2{
+    max-height: 17px;
+}
+#logo3{
+    max-height: 11px;
+}
+#logo4{
+    max-height: 15px;
+}
+.logos img{
+    height: 100%;
+}
+.access-div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+#myinput{
+    background-color: #2C344B;
+    border: none;
+    width: 100%;
+    height: 46px;
+    border-radius: 100px;
+    padding-left: 32px;
+    font-family: "Chivo", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: white;
+}
+#myinput::placeholder{
+    font-size: 14px;
+    font-family: "Chivo", sans-serif;
+    font-weight: 400;
+    line-height: 28px;
+    color: white;
+    opacity: 50%;
+}
+button{
+    width: 100%;
+    height: 46px;
+    background-color: #54E6AF;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0px 25px 20px -20px #54E6AF7F;
+}
+button h1{
+    color: #121725;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+@media only screen and (min-width: 720px){
+    body{
+        padding: 50px 94px 256px 39px;
+        align-items: start;
+        background-image: url(images/desktop/bg-pattern-dots.svg);
+        background-repeat: no-repeat;
+        background-size: 232px 104px;
+        background-position: 30px 100%;
+    }
+    body::before{
+        content: '';
+        background-image: url(images/tablet/image-host.jpg);
+        background-size: 491px 767px;
+        opacity: 1;
+        top: 0;
+        left: calc(100% - 491px);
+    }
+    main{
+        max-width: 635px;
+        background-color: #121725;
+        padding-top: 93px;
+        min-height: 509px;
+    }
+    #main-heading{
+        font-size: 48px;
+        line-height: 56px;
+        text-align: start;
+        margin-bottom: 31px;
+    }
+    #text{
+        max-width: 445px;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: start;
+        margin-bottom: 40px;
+    }
+    .logos{
+        max-height: 29px;
+        max-width: 536px;
+        bottom: 0;
+    }
+    #logo1, #logo2{
+        max-height: 29px;
+    }
+    #logo3{
+        max-height: 18px;
+    }
+    #logo4{
+        max-height: 26px;
+    }
+    .access-div{
+        flex-direction: row;
+        gap: 0;
+        max-width: 427px;
+    }
+    #myinput{
+        height: 56px;
+    }
+    button{
+        max-width: 162px;
+        margin-left: -167px;
+    }
+}
