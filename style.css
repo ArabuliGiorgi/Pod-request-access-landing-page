@@ -124,18 +124,24 @@ button h1{
     body{
         padding: 50px 94px 256px 39px;
         align-items: start;
+    }
+    body::before{
+        background-image: url(images/tablet/image-host.jpg);
+        background-size: 491px 767px;
+        background-position: 100% 0;
+        opacity: 1;
+    }
+    body::after{
+        content: '';
         background-image: url(images/desktop/bg-pattern-dots.svg);
         background-repeat: no-repeat;
         background-size: 232px 104px;
         background-position: 30px 100%;
-    }
-    body::before{
-        content: '';
-        background-image: url(images/tablet/image-host.jpg);
-        background-size: 491px 767px;
-        opacity: 1;
+        position: absolute;
         top: 0;
-        left: calc(100% - 491px);
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     main{
         max-width: 635px;
@@ -181,5 +187,27 @@ button h1{
     button{
         max-width: 162px;
         margin-left: -167px;
+    }
+}
+@media only screen and (min-width: 1440px){
+    body{
+        padding: 102px 0 130px 165px;
+    }
+    body::before{
+        background-image: url(images/desktop/image-host.jpg);
+        background-size: 888px 640px;
+        background-position: 100% 130px;
+    }
+    body::after{
+        background-position: 100% calc(100% - 78px);
+    }
+    main{
+        max-width: 723px;
+        padding-top: 88px;
+    }
+    #main-heading{
+        font-size: 52px;
+        line-height: 62px;
+        margin-bottom: 24px;
     }
 }
