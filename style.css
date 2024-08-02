@@ -231,4 +231,7 @@ button:active{
         line-height: 62px;
         margin-bottom: 24px;
     }
+    button:hover{
+        cursor: pointer;
+    }
 }
